@@ -44,21 +44,24 @@ body {
 .header {
     display: flex;
     order: 2;
-    flex-direction: column; /*로고와 메뉴영역이 세로로 배치. 따라서 컬럼*/
-    position: relative;
+    /* flex-direction: column; 로고와 메뉴영역이 세로로 배치. 따라서 컬럼 */
     width: 100%;
+    background: gainsboro;
 }
-.header_title a {
-    order: 2;
-    width: 100%;
+.header_logo {
+    justify-content: left;
+    width: 20%;
+}
+.header_title {
+    justify-content: center;
+    width: 80%;
     padding: 30px 0;
     padding: 1.875rem 0;
-    font-size: 1.188em;
-    font-size: 1.188rem;
+    font-size: 4.188em;
+    font-size: 4.188rem;
     line-height: 21px;
     line-height: 1.313rem;
     text-align: center;
-    text-shadow: 0px 1px 1px darkred;
     color: black;
     font-family: 'BMEuljiro10yearslater'; 
 }
@@ -87,6 +90,19 @@ section .title {
     #wrap {
         flex-flow: row wrap; /*박스를 가로로 배치하면서 여러 줄로 배치*/
     }
+
+    /* 헤더 영역 */
+    .header {
+        flex-direction: row; /*헤더영역 자식 박스들이 가로로 배치*/ 
+        z-index: 10;
+        padding: 0;
+    }
+    .header_title {
+        padding: 60px 0;
+        padding: 3.125rem 0;
+        font-size: 7.188em;
+        font-size: 7.188rem;
+    }
 }
 
 
@@ -99,38 +115,17 @@ section .title {
         width: 90%;
     }
     
-    /* nav 영역 */
-.nav {
-    order: 0; /*박스 위치 초기화하기 위해 0*/
-    position: absolute; /*절대적 위치. 상단 오른쪽에 설정하려고 밑에 top, right 설정*/
-    top: 30px;
-    top: 1.875rem;
-    right: 30px;
-    right: 1.875rem;
-    z-index: 30; /*다른 요소들에 가려지지 않게 요소 겹치는 순서 설정*/
-    width: auto;
-    border-bottom:0;
-}
-.nav_list li {
-    width: auto;
-    margin-left: 15px;
-    margin-left: 0.625rem;
-}
-.nav_list li a {
-    padding: 0;
-}
-    
-    /* 뉴스 영역 */
-    section {
-        order: 3;
-        display: flex;
-        align-items: center;
-        width: 100%;
-        height: 300px;
-        height: 18.750rem;
-        cursor: pointer;
+    /* 헤더 영역 */
+    .header {
+        flex-direction: row; /*헤더영역 자식 박스들이 가로로 배치*/ 
+        z-index: 10;
+        padding: 0;
     }
-    section .title {
-        font-family: 'BMEuljiro10yearslater';
+    .header_title {
+        padding: 60px 0;
+        padding: 3.125rem 0;
+        font-size: 10.188em;
+        font-size: 10.188rem;
     }
+   
 }
