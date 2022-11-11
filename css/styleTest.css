@@ -6,14 +6,14 @@
 body {
     margin: 0;
     padding: 0;
-    background: gray;
 }
 
 /* 모바일용 */
 #wrap {
     margin: 0 auto;
-    width: 80%;
+    width: 90%;
     max-width: 1200px;
+    min-width: 350px;
     display: flex;
     flex-flow: column nowrap;
     background: lightgray;
@@ -23,18 +23,22 @@ body {
 
 .nav {
     order: 1;
-    padding: 10px;
-    color: white;
+    position: sticky;
+    top: 0;
+    padding: 10px 0;
+    margin: 5px;
     background: black;
     box-shadow: 0 0 10px black;
     border-radius: 6px;
 }
 .nav_list {
     list-style-type: none;
+    text-align: center; /*1. li 가로 가운데 정렬*/
 }
 .nav_list li {
-    float: left;
+    display: inline-block; /*2.li 가로 가운데 정렬*/
     justify-content: space-between;
+    align-items: center;
     text-shadow: 0 0 5px white;
     text-align: center;
     margin: 0 10px;
@@ -43,19 +47,18 @@ body {
 
 .header {
     order: 2;
-    /* margin: 5px; */
     background: whitesmoke;
     box-shadow: 0 0 10px black;
-    /* border-radius: 6px; */
     display: flex;
     flex-direction: row;
 }
 .header_logo {
-    width: 17%;
-    height: 10%;
+    width: 10%;
 }
 .header_title {
-    /* font-size: ; */
+    padding: 5px;
+    font-size: 25px;
+    font-size: 2.5rem;
     font-family: 'BMEuljiro10yearslater';
     color: black;
     text-shadow: 0 0 5px black;
@@ -66,10 +69,12 @@ body {
 #slide_article {
     order: 3;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin: 5px;
+    height: 70%;
+    /* margin: 5px; */
     background: white;
     /* border-radius: 6px; */
     box-shadow: 0 0 10px black;
@@ -77,8 +82,18 @@ body {
 #slide_article section {
     width: 100%;
     margin: 5px;
-    border: 3px solid black;
-    box-shadow: 0 0 5px black;
+    border: 5px solid black;
+    /* box-shadow: 0 0 5px black; */
+}
+#slide_article section h2 {
+    margin: 5px;
+    border: 2px solid black;
+}
+#slide_article section li {
+    margin: 5px;
+}
+#slide_article section li a {
+    color: black;
 }
 
 section h2 {
@@ -113,7 +128,7 @@ footer {
 @media all and (min-width:960px) {
     #wrap {
         position: relative;
-        width: 90%;
+        width: 100%;
         background: lightgray;
         border-radius: 6px;
         box-shadow: 0 0 10px black;
@@ -122,28 +137,43 @@ footer {
     .nav {
         order: 0;
         position: absolute;
-        top: 30px;
-        right: 30px;
-        right: 1.875rem;
+        top: 15px;
+        right: 15px;
+        right: 0.9375rem;
         z-index: 30;
-        width: auto;
+        width: 6%;
+        height: auto;
+        max-height: 80px;
 
-        color: white;
-        background: black;
-        box-shadow: 0 0 10px black;
+        background: whitesmoke;
         border-radius: 6px;
         border-bottom: 0;
     }
     .nav_list li {
-        width: auto;
-        margin-left: 15px;
-        margin-left: 0.625%;
+        margin: 2px;
         float: none;
+        text-align: left;
+    }
+    .nav_list li a {
+        color: black;
+    }
+
+    .header {
+        background: black;
+        box-shadow: 0 0 10px black;
+        border-radius: 6px;
+    }
+    .header_title {
+        font-size: 50px;
+        font-size: 5rem;
+        color: white;
+        text-shadow: 0 0 5px white;
     }
     
     #slide_article {
         order: 2;
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
         align-items: center;
         width: 100%;
