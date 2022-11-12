@@ -17,8 +17,13 @@
                 <li><a href = "about.html">About</a></li>
                 <li><a href = "newsfeed.html">Newsfeed</a></li>
                 <li><a href = "board.html">Board</a></li>
-                <li><a href = "#">Search</a></li>
             </ul>
+            <div class = "search_box">
+                <a href = "#" class="search_btn"></a>
+                <form class = "search_form" action="index.html" method="post">
+                    <input type="text" name = "" value = "" placeholder="Search">
+                </form>
+            </div>
 
             <!-- <span class="menu_toggle_btn">전체 메뉴 토글 버튼</span> -->
         </nav>
@@ -28,72 +33,71 @@
             <a class="header_title" href = "index.html">언론사초</a>
         </header>
         
-        <div id="slide_article">
-            <section class="slider">
-                <span class="prev_btn"><<</span>
-                <span class="next_btn">>></span>
-            </section>
-    
-            <section class = "today_hot">
-                <h2 class = "title">오늘논점</h2>
-                <ul class = "hot_list">
-                    <li><a href="">월요일</a></li>
-                    <li><a href="">화요일</a></li>
-                    <li><a href="">수요일</a></li>
-                    <li><a href="">목요일</a></li>
-                    <li><a href="">금요일</a></li>
-                    <li><a href="">월요일</a></li>
-                    <li><a href="">화요일</a></li>
-                    <li><a href="">수요일</a></li>
-                    <li><a href="">목요일</a></li>
-                    <li><a href="">금요일</a></li>
-                </ul>
-            </section>
-            
-            <section class="yesterday_hot">
-                <h2 class="title">어제논점</h2>
-                <ul class = "hot_list">
-                    <li><a href="">월요일</a></li>
-                    <li><a href="">화요일</a></li>
-                    <li><a href="">수요일</a></li>
-                    <li><a href="">목요일</a></li>
-                    <li><a href="">금요일</a></li>
-                    <li><a href="">월요일</a></li>
-                    <li><a href="">화요일</a></li>
-                    <li><a href="">수요일</a></li>
-                    <li><a href="">목요일</a></li>
-                    <li><a href="">금요일</a></li>
-                </ul>
-            </section>
-            
-            <section class="hot_talk">
-                <h2 class="title">온탕</h2>
-                <ul class = "hot_list">
-                    <li><a href="">월요일</a></li>
-                    <li><a href="">화요일</a></li>
-                    <li><a href="">수요일</a></li>
-                    <li><a href="">목요일</a></li>
-                    <li><a href="">금요일</a></li>
-                    <li><a href="">월요일</a></li>
-                    <li><a href="">화요일</a></li>
-                    <li><a href="">수요일</a></li>
-                    <li><a href="">목요일</a></li>
-                    <li><a href="">금요일</a></li>
-                </ul>
-            </section>
-    
-            <section class="tag">
-                <h2 class="tag">Tag</h2>
-                <ul class="tag_list">
-                    <li><a href=""></a></li>
-                </ul>
-            </section>
-        </div>
+        <div class="slider">
+            <div class="slides">
+                <div id="today">
+                    <ul>
+                            <h2 class = "title">오늘논점</h2>
+                            <li><a href="">월요일</a></li>
+                            <li><a href="">화요일</a></li>
+                            <li><a href="">수요일</a></li>
+                            <li><a href="">목요일</a></li>
+                            <li><a href="">금요일</a></li>
+                            <li><a href="">월요일</a></li>
+                            <li><a href="">화요일</a></li>
+                            <li><a href="">수요일</a></li>
+                            <li><a href="">목요일</a></li>
+                            <li><a href="">금요일</a></li>
+                        </ul>
+                </div>
+                <div id="yesterday">
+                    <ul>
+                        <h2 class="title">어제논점</h2>
+                        <li><a href="">월요일</a></li>
+                        <li><a href="">화요일</a></li>
+                        <li><a href="">수요일</a></li>
+                        <li><a href="">목요일</a></li>
+                        <li><a href="">금요일</a></li>
+                        <li><a href="">월요일</a></li>
+                        <li><a href="">화요일</a></li>
+                        <li><a href="">수요일</a></li>
+                        <li><a href="">목요일</a></li>
+                        <li><a href="">금요일</a></li>
+                    </ul>
+                </div>    
+                <div id="hot">
+                    <ul>
+                        <h2 class="title">온탕</h2>
+                        <li><a href="">월요일</a></li>
+                        <li><a href="">화요일</a></li>
+                        <li><a href="">수요일</a></li>
+                        <li><a href="">목요일</a></li>
+                        <li><a href="">금요일</a></li>
+                        <li><a href="">월요일</a></li>
+                        <li><a href="">화요일</a></li>
+                        <li><a href="">수요일</a></li>
+                        <li><a href="">목요일</a></li>
+                        <li><a href="">금요일</a></li>
+                    </ul>
+                </div>
+            </div>
+            <a href="#today">오늘논점</a>
+            <a href="#yesterday">어제논점</a>
+            <a href="#hot">온탕</a>
+        </div>        
+
         
         <footer>
             <p>copyright&copy;2022.Annals of Press all rights reserved.</p>
         </footer>
 
+
     </div>
 </body>
+        <script type="text/javascript">
+            $("search_btn").on("click", function() {
+                $('.search_btn').toggleClass('btnc');
+                $('.search-box').toggleClass('s');
+            });
+        </script>
 </html>
